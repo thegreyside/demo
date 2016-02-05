@@ -64,7 +64,7 @@ $(function () {
       loop: true,
       margin: 10,
       autoHeight: true,
-      autoplay: false,
+      autoplay: true,
       autoplayTimeout: 2000,
       autoplayHoverPause: true,
       responsiveClass: true,
