@@ -1,0 +1,58 @@
+- for menu, index in public._data.menus
+	case index
+		when 1
+			section.page.about
+				.content.container
+					h2(id="#{ menu.url }") #{ menu.label }
+					
+					
+					
+footer.page#foot
+	.container
+		.row
+			.col-xs-12.col-md-5.col-md-offset-2
+				p #{ public._data.address.type }
+				br
+				.row
+					.col-xs-1
+						i.fa.fa-map-marker.fa-lg
+					.col-xs-10
+						| #{ public._data.address.street }
+				.row
+					.col-xs-1
+						i.fa.fa-phone.fa-lg
+					.col-xs-10
+						| #{ public._data.address.phone }
+				.row
+					.col-xs-1
+						i.fa.fa-fax.fa-lg
+					.col-xs-10
+						| #{ public._data.address.fax }
+				.row
+					.col-xs-1
+						i.fa.fa-envelope-o.fa-lg
+					.col-xs-10
+						| #{ public._data.address.email }
+				
+			//
+				span.glyphicon.glyphicon-map-marker(aria-hidden="true") #{ public._data.address.street }
+				br
+				span.glyphicon.glyphicon-earphone(aria-hidden="true") #{ public._data.address.phone }
+				br
+				span.glyphicon.glyphicon-enveloper(aria-hidden="true") #{ public._data.address.email }			
+			
+			
+			
+			.col-xs-12.col-md-3.col-md-offset-1
+				p #{ public._data.social.label }
+				br
+				a.social(href="#{ public._data.social.facebook }")
+					i.fa.fa-facebook-square.fa-2x
+				a.social(href="#{ public._data.social.twitter }")
+					i.fa.fa-twitter-square.fa-2x
+				a.social(href="#{ public._data.social.linkedin }")
+					i.fa.fa-linkedin-square.fa-2x
+					
+					
+					
+iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2042776.464965878!2d116.3033751128841!3d-0.1838365847234134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMMKwMTEnMDIuMCJTIDExN8KwMjUnMjkuMSJF!5e0!3m2!1sen!2s!4v1453171993004" width="100%" height="100%" frameborder="0" style="border:0" marginheight="0" marginwidth="0" allowfullscreen)

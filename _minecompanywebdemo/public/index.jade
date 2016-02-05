@@ -1,0 +1,181 @@
+// nav
+header.banner.fullheight#home
+	nav.navbar.navbar-inverse.navbar-fixed-top#menu.menu--valentine
+		.container
+			.navbar-header
+				button(type="button" data-toggle="collapse" data-target="#myNavbar").navbar-toggle.collapsed
+					span.sr-only Toggle navigation
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				a(class="navbar-brand" href="#home")
+					h1#logo #{ title }
+
+			.collapse.navbar-collapse#myNavbar
+				ul.nav.navbar-nav.navbar-right.menu__list
+					- for menu, index in public._data.menus
+						case index
+							when 0
+								li.menu__item.active
+									a.menu__link(href="#" + "#{ menu.url }") #{ menu.label }
+							default
+								li.menu__item
+									a.menu__link(href="#" + "#{ menu.url }") #{ menu.label }
+
+	
+// sections
+- for menu, index in public._data.menus
+	case index
+		when 1
+			section.page(id="#{ menu.url }")
+				.container
+					h2.heading #{ menu.label }
+					p.text-justify PT. #{ name } #{ public._data.about }
+					h3.subheading Our vision & mission
+					p.text-center: strong #{ public._data.vision }
+					p.text-justify #{ public._data.mission }
+			article.page#team
+				.container
+					h3.subheading Our team
+					.row
+						- for member in public._data.team
+							.col-xs-12.col-sm-4
+								img.center-block.avatar(src="#{ member.avatar }")
+								p.text-center.name: strong #{ member.name }
+								p.text-center #{ member.desc }
+		when 2
+			section.page(id="#{ menu.url }")
+				.container
+					h2.heading #{ menu.label }
+					.row
+						- for item in public._data.facilities
+							article.facility.col-xs-12.col-sm-4.col-lg-4
+								img.center-block.icon(src="img/gear.png")
+								h4.text-center: strong #{ item.label }
+								p.text-justify #{ item.desc }
+								p: button.btn.btn-primary.btn-shadow #{ item.morebtn }
+								// p #{ item.detail } // for later use
+		when 3
+			section.page(id="#{ menu.url }")
+				.container
+					h2.heading #{ menu.label }
+					.owl-carousel#gal
+						.image-box: img(src="/img/gal1.jpg")
+						.image-box: img(src="/img/gal2.jpg")
+						.image-box: img(src="/img/gal3.jpg")
+						.image-box: img(src="/img/gal4.jpg")
+						.image-box: img(src="/img/gal4.jpg")
+						.image-box: img(src="/img/gal4.jpg")
+						.image-box: img(src="/img/gal4.jpg")
+						.image-box: img(src="/img/gal4.jpg")
+						.image-box: img(src="/img/gal4.jpg")
+						.image-box: img(src="/img/gal5.jpg")
+						
+		when 4
+			section.page(id="#{ menu.url }")
+				.container
+					h2.heading #{ menu.label }
+					.owl-carousel#cLogo
+						.image-box-small: img(src="img/client1.png")
+						.image-box-small: img(src="img/client2.png")
+						.image-box-small: img(src="img/client3.png")
+						.image-box-small: img(src="img/client4.png")
+						.image-box-small: img(src="img/client4.png")
+						.image-box-small: img(src="img/client4.png")
+						.image-box-small: img(src="img/client4.png")
+						.image-box-small: img(src="img/client4.png")
+						.image-box-small: img(src="img/client4.png")
+						.image-box-small: img(src="img/client4.png")
+		
+			section#map
+				.map-container
+					iframe(width="100%" height="100%" frameborder="0" style="border:0" marginheight="0" marginwidth="0" allowfullscreen src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2042776.464965878!2d116.3033751128841!3d-0.1838365847234134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMMKwMTEnMDIuMCJTIDExN8KwMjUnMjkuMSJF!5e0!3m2!1sen!2s!4v1453171993004")
+					
+		when 5
+			section.page(id="#{ menu.url }")
+				.container.container-small
+					h2.heading #{ menu.label }
+					form
+						rows
+							.form-group.col-xs-12.col-sm-6.col-md-6
+								label.inputName Name
+								input(
+								type="text"
+								class="form-control"
+								id="inputName"
+								placeholder="Your name"
+								)
+							.form-group.col-xs-12.col-sm-6.col-md-6
+								label.inputEmail Email
+								input(
+								type="text"
+								class="form-control"
+								id="inputEmail"
+								placeholder="you@domain.com"
+								)
+							.form-group.col-cs-12.col-sm-12.col-md-12
+								label.inputTextArea Message
+								textarea(
+								class="form-control"
+								rows="3"
+								)
+								br
+								button.btn.btn-primary.btn-shadow(type="submit") SEND 
+									i.fa.fa-send
+		
+
+footer.page#foot
+	.container
+		.row
+			.col-xs-12.col-md-5.col-md-offset-2
+				.address
+					strong #{ public._data.address.type }
+					br
+					.row
+						.col-xs-1
+							i.fa.fa-map-marker.fa-lg
+						.col-xs-10
+							| #{ public._data.address.street }
+					.row
+						.col-xs-1
+							i.fa.fa-phone.fa-lg
+						.col-xs-10
+							| #{ public._data.address.phone }
+					.row
+						.col-xs-1
+							i.fa.fa-fax.fa-lg
+						.col-xs-10
+							| #{ public._data.address.fax }
+					.row
+						.col-xs-1
+							i.fa.fa-envelope-o.fa-lg
+						.col-xs-10
+							| #{ public._data.address.email }
+
+			//
+				span.glyphicon.glyphicon-map-marker(aria-hidden="true") #{ public._data.address.street }
+				br
+				span.glyphicon.glyphicon-earphone(aria-hidden="true") #{ public._data.address.phone }
+				br
+				span.glyphicon.glyphicon-enveloper(aria-hidden="true") #{ public._data.address.email }			
+			
+			
+			
+			.col-xs-12.col-md-3.col-md-offset-1
+				.address
+					strong #{ public._data.social.label }
+					br
+					a.social(href="#{ public._data.social.facebook }")
+						i.fa.fa-facebook-square.fa-2x
+					a.social(href="#{ public._data.social.twitter }")
+						i.fa.fa-twitter-square.fa-2x
+					a.social(href="#{ public._data.social.linkedin }")
+						i.fa.fa-linkedin-square.fa-2x
+
+.container-fluid#copyright
+	p.text-center Copyright 
+		i.fa.fa-copyright
+		| 2016,  
+		a(href="#") PT. #{ name } 
+		| | Designed by: 
+		a(href="#{ public._data.designer.homepage }") #{ public._data.designer.name }

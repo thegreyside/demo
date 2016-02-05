@@ -1,0 +1,90 @@
+/*!
+ * assets/stylesheets/bootstrap v3.3.6 (http://getassets/stylesheets/bootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/assets/stylesheets/bootstrap/blob/master/LICENSE)
+ */
+
+$orange-base:                               #ff6633;
+$white-base:                           			#ffffff;
+
+/* taken from _variables.scss */
+$gray-base:                            			#000;
+$brand-primary:                        			darken($orange-base, 6.5%);
+$gray-lighter:                         			lighten($gray-base, 93.5%); // #eee
+$body-bg:                              			$gray-lighter;
+$font-family-sans-serif:                    'Open Sans', Roboto, sans-serif;
+$headings-font-family:                      Ubuntu, sans-serif;
+// button
+$button-primary-color:                 			lighten($orange-base, 10%);
+// form
+$input-border-focus:                   			lighten(#f63, 10%);
+// navbar
+$navbar-height:             					 			40px;
+// navbar inverse
+$navbar-inverse-color:      					 			lighten($orange-base, 15%);
+$navbar-inverse-bg:         					 			rgba(0,0,0,0.5);
+$navbar-inverse-link-color: 					 			lighten($white-base, 15%);
+$navbar-inverse-link-hover-color:			 			$orange-base;
+// try with valentine
+$navbar-inverse-link-active-bg:             transparent;
+$navbar-inverse-toggle-hover-bg:            $orange-base;
+$navbar-inverse-toggle-icon-bar-bg:         #fff;
+$navbar-inverse-toggle-border-color:        #333;
+
+
+
+
+ 
+
+// Core variables and mixins
+@import "assets/stylesheets/bootstrap/variables";
+@import "assets/stylesheets/bootstrap/mixins";
+
+// Reset and dependencies
+@import "assets/stylesheets/bootstrap/normalize";
+@import "assets/stylesheets/bootstrap/print";
+//@import "assets/stylesheets/bootstrap/glyphicons";
+
+// Core CSS
+@import "assets/stylesheets/bootstrap/scaffolding";
+@import "assets/stylesheets/bootstrap/type";
+//@import "assets/stylesheets/bootstrap/code";
+@import "assets/stylesheets/bootstrap/grid";
+//@import "assets/stylesheets/bootstrap/tables";
+@import "assets/stylesheets/bootstrap/forms";
+@import "assets/stylesheets/bootstrap/buttons";
+
+// Components
+@import "assets/stylesheets/bootstrap/component-animations";
+//@import "assets/stylesheets/bootstrap/dropdowns";
+//@import "assets/stylesheets/bootstrap/button-groups";
+//@import "assets/stylesheets/bootstrap/input-groups";
+@import "assets/stylesheets/bootstrap/navs";
+@import "assets/stylesheets/bootstrap/navbar";
+/*@import "assets/stylesheets/bootstrap/breadcrumbs";
+@import "assets/stylesheets/bootstrap/pagination";
+@import "assets/stylesheets/bootstrap/pager";*/
+@import "assets/stylesheets/bootstrap/labels";
+/*@import "assets/stylesheets/bootstrap/badges";
+@import "assets/stylesheets/bootstrap/jumbotron";
+@import "assets/stylesheets/bootstrap/thumbnails";
+@import "assets/stylesheets/bootstrap/alerts";
+@import "assets/stylesheets/bootstrap/progress-bars";
+@import "assets/stylesheets/bootstrap/media";
+@import "assets/stylesheets/bootstrap/list-group";
+@import "assets/stylesheets/bootstrap/panels";
+@import "assets/stylesheets/bootstrap/responsive-embed";
+@import "assets/stylesheets/bootstrap/wells";
+@import "assets/stylesheets/bootstrap/close";*/
+
+// Components w/ JavaScript
+/*@import "assets/stylesheets/bootstrap/modals";
+@import "assets/stylesheets/bootstrap/tooltip";
+@import "assets/stylesheets/bootstrap/popovers";*/
+//@import "assets/stylesheets/bootstrap/carousel";
+
+// Utility classes
+/*
+@import "assets/stylesheets/bootstrap/utilities";
+@import "assets/stylesheets/bootstrap/responsive-utilities";
+*/

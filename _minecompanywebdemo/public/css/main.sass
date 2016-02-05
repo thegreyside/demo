@@ -1,0 +1,157 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,400italic,500,700)
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500)
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800)
+
+@import 'bootstrap-custom'
+@import 'font-awesome-custom'
+
+
+.container-small
+	width: 70%
+
+
+body
+	position: relative
+	font-weight: 300
+	font-size: 1.6em
+	color: #000000
+	letter-spacing: 1px
+
+.page
+	height: auto
+	padding: 30px 0 30px 0
+
+#logo
+	font-size: 1em
+	margin: 0
+
+.heading, .subheading
+	text-align: center
+	padding-bottom: 0.5em
+
+.banner
+	background-image: url(/img/banner.jpg)
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center center
+	width: 100%
+	height: 510px
+
+#about
+	//background: rgba(43, 80, 47, 0.9)
+	//background: rgb(103, 66, 25)
+	
+
+#team
+	//background: rgba(117, 130, 56, 0.8)
+	background: rgb(75, 51, 28)
+	color: #ffffff
+
+.avatar
+	@extend .icon
+	width: 120px
+
+
+.icon
+	padding: 20px 0
+	// needed by center-block
+	margin: auto
+	display: block
+
+#facilities
+	//color: #5c6c73
+	//color: #666666
+
+#galleries
+	color: #ffffff
+	//background: rgba(255, 77, 18, 0.7)
+	background: rgba(75, 51, 28, 0.77)
+	.image-box
+		@extend .icon
+		//height: 200px
+
+.image-box-small
+	@extend .icon
+	height: auto
+	width: 150px
+
+#clients
+	background: rgba(85, 85, 85, 0.05)
+
+.map-container
+	height: 200px
+
+#contactus
+	color: #ffffff
+	background-image: url(/img/contactbg.jpg)
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center center
+	//width: 100%
+	//height: 100%
+	label
+		font-weight: 300
+
+#foot
+	background: #362f2d
+	color: #ffffff
+	padding: 50px 0
+
+#copyright
+	padding: 5px 0
+	background: rgba(0,0,0,.9)
+	color: #ccc
+	p
+		padding: 0
+		margin: 0
+		font-weight: 100
+		font-size: 0.6em
+	
+.social .fa
+	padding-right: 10px
+
+
+
+
+// Owl carousel custom
+
+
+.owl-dots
+	padding: 1.5em
+	text-align: center
+
+.owl-dot
+  display: inline-block
+
+.owl-dot span
+  background: none repeat scroll 0 0 #869791
+  border: 0 solid #402600
+  border-radius: 50%
+  -webkit-box-shadow: 0 0 1px 0px rgb( 255, 255, 255)
+  box-shadow: 0 0 1px 0px rgb( 255, 255, 255)
+  z-index: 8
+  display: block
+  height: 12px
+  margin: 5px 7px
+  width: 12px
+
+.owl-dot.active span
+  background: none repeat scroll 0 0 #ffffff
+	
+// navbar custom with valentine css
+
+.navbar
+	font-family: Ubuntu
+	font-weight: 500
+	padding: 1em
+
+/* Stack items for smaller screens */
+@media screen and (max-width:55em)
+	.navbar
+		padding: 0.3em
+	.address
+		padding-top: 20px
+
+//btn-shadow
+.btn-shadow
+	box-shadow: 2px 2px 3px #888888
