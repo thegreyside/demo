@@ -61,6 +61,18 @@ $(function () {
     var wheight = $(window).height(); //get the height of window browser
     $('.fullheight').css('height', wheight); // set to window target
   });
+  
+  // Add an inbody class to nav when scrollspy event
+  // the purpose is unknown ... (i think this is for setting the navbar color)
+
+  $('#menu').on('activate.bs.scrollspy', function () {
+    var hash = $(this).find('li.active a').attr('href');
+    if (hash !== '#home') {
+      $('header nav').addClass('inbody');
+    } else {
+      $('header nav').removeClass('inbody');
+    }
+  });
 
   // owl carousel
   $(document).ready(function () {
