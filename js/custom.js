@@ -52,10 +52,15 @@ $(function () {
 
 
   // adjust height of fullheight elemements on window resize
-  $(window).resize(function () {
+  $(document).ready(function () {
+    var wheight = $(window).height(); //get the height of window browser
     $('.fullheight').css('height', wheight); // set to window target
   });
 
+  $(window).resize(function () {
+    var wheight = $(window).height(); //get the height of window browser
+    $('.fullheight').css('height', wheight); // set to window target
+  });
 
   // owl carousel
   $(document).ready(function () {
